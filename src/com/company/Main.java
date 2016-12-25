@@ -15,7 +15,7 @@ public class Main {
     public static String compress(String input){
 
         // split string to sup strings
-        Matcher matcher = Pattern.compile("(\\w)\\1+").matcher(input);
+        Matcher matcher = Pattern.compile("(\\w)\\1*").matcher(input);
         List<String> groupsList = new ArrayList<>();
         while (matcher.find()){
             groupsList.add(matcher.group());
@@ -25,9 +25,7 @@ public class Main {
         // n count of char
         for (int i = 0; i < groupsList.size(); i++) {
             String group = groupsList.get(i);
-            group = (group.length() > 1)?
-                    (group.charAt(0) + "" + group.length() + "" ):
-                    (group.charAt(0) + "");
+            group = group.charAt(0) + "" + group.length() + "" ;
             groupsList.remove(i);
             groupsList.add(i, group);
         }
