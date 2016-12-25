@@ -26,7 +26,7 @@ public class Main {
         for (int i = 0; i < groupsList.size(); i++) {
             String group = groupsList.get(i);
             group = (group.length() > 1)?
-                    (group.charAt(0) + ""+ group.length() + "" ):
+                    (group.charAt(0) + "" + group.length() + "" ):
                     (group.charAt(0) + "");
             groupsList.remove(i);
             groupsList.add(i, group);
