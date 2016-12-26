@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        System.out.println(compress("aabcccccaaa"));
+        System.out.println(compress("bb"));
     }
 
     public static String compress(String input){
@@ -36,7 +36,7 @@ public class Main {
             finalResult.append(groupsList.get(i));
         }
         return input =
-                finalResult.toString().length() <= input.length()?
+                finalResult.toString().length() < input.length()?
                         finalResult.toString(): input;
     }
 }
